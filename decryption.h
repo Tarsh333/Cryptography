@@ -11,7 +11,7 @@ void decryption()
     cin >> inputstr;
     int algo;
 algoenter:
-    cout << "Enter \n 1 for affine cipher \n 2 for caesar cipher \n 3 for multiplicative cipher \n 4 for autokey cipher \n 5 for vignere cipher" << endl;
+    cout << "Enter \n 1 for affine cipher \n 2 for caesar cipher \n 3 for multiplicative cipher \n 4 for autokey cipher \n 5 for vignere cipher \n 6 for rotor cipher \n 7 for rail fence cipher" << endl;
     cin >> algo;
     switch (algo)
     {
@@ -29,6 +29,12 @@ algoenter:
         break;
     case 5:
         printdecr(vigenerecipherdecrypt(inputstr));
+        break;
+    case 6:
+        printdecr(rotorcipherdecrypt(inputstr));
+        break;
+    case 7:
+        printdecr(railfencecipherdecrypt(inputstr));
         break;
     default:
         cout << "Invalid!!! " << endl;

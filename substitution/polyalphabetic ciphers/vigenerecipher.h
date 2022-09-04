@@ -6,7 +6,6 @@ string vigenerecipherencrypt(string s){
         s[j]=(s[j]-'a');
         s[j]+=(secret[i]-'a');
         s[j]%=26;
-        // cout<<s[j]<<" "<<secret[i]-'a'<<endl;
         s[j]+='a';
     }
     return s;
