@@ -5,16 +5,17 @@ using namespace std;
 int main()
 {
     char decision;
-    cout << "Enter e for encryption and d for decryption" << endl;
+    cout << "Enter e for encryption and d for decryption and anything else to exit" << endl;
     cin >> decision;
-    while (decision != 'd' && decision != 'e')
+    while (decision == 'e' || decision == 'E' || decision == 'D' || decision == 'd')
     {
-        cout << "Invalid input!!! Enter e for encryption and d for decryption" << endl;
+        if (decision == 'e' || decision == 'E')
+            encryption();
+        else if (decision == 'd' || decision == 'D')
+            decryption();
+        cout << "Enter e for encryption and d for decryption and anything else to exit" << endl;
         cin >> decision;
     }
-    if (decision == 'e')
-        encryption();
-    else
-        decryption();
+    cout << "Exited !!!!";
     return 0;
 }

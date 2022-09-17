@@ -8,10 +8,11 @@ void encryption()
 {
     string inputstr;
     cout << "Enter string to be encrypted" << endl;
-    cin >> inputstr;
+    cin.ignore();
+    getline(cin, inputstr);
     int algo;
 algoenter:
-    cout << "Enter \n 1 for affine cipher \n 2 for caesar cipher \n 3 for multiplicative cipher \n 4 for autokey cipher \n 5 for vignere cipher \n 6 for rotor cipher \n 7 for rail fence cipher"<<endl;
+    cout << "Enter \n 1 for affine cipher \n 2 for caesar cipher \n 3 for multiplicative cipher \n 4 for autokey cipher \n 5 for vignere cipher \n 6 for rotor cipher \n 7 for rail fence cipher" << endl;
     cin >> algo;
     switch (algo)
     {
@@ -37,7 +38,7 @@ algoenter:
         printencr(railfencecipherencrypt(inputstr));
         break;
     default:
-    cout<<"Invalid!!! "<<endl;
+        cout << "Invalid!!! " << endl;
         goto algoenter;
         break;
     }
